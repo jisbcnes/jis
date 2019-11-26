@@ -8,9 +8,9 @@ pipeline {
          steps {
             // Get some code from a GitHub repository
             git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-            container('centos') {
+            container('ubuntu') {
             // Run Maven on a Unix agent.
-                sh "yum --version"
+                sh "apt --version"
             }
             // To run Maven on a Windows agent, use
             // bat "mvn -Dmaven.test.failure.ignore=true clean package"
